@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GitPullRequest</string>
+    <string name="hint_search_here">Github {owner/repo}</string>
+    <string name="dialog_msg">Please wait while we are getting pull requests…</string>
 </resources>

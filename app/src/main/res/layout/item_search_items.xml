@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ImageView
+            android:id="@+id/ivGitProfilePic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_github_logo"
+            tools:ignore="ContentDescription"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            tools:text="Retrofit"
+            android:maxLines="2"
+            android:textSize="16sp"
+            android:id="@+id/tvPullReqTitle"
+            android:ellipsize="end"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGitProfilePic"
+            app:layout_constraintTop_toTopOf="@id/ivGitProfilePic"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            tools:text="#566"
+            android:id="@+id/tvPullReqNo"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/tvPullReqTitle"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@id/ivGitProfilePic"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGitProfilePic"/>
+
+    <View
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/grey_200"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,21 +1,23 @@
 package com.vikas.daggergitpullrequestsample.base
 
-import android.app.Activity
+import android.app.ProgressDialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import dagger.android.AndroidInjection
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
 import javax.inject.Inject
 
 /**
  * base activity for all the child activity ui
  */
-abstract class BaseActivity :AppCompatActivity(){
+@Suppress("DEPRECATION")
+abstract class BaseActivity : AppCompatActivity() {
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidInjection.inject(this)
     }
-
 }
